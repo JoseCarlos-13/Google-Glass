@@ -1,0 +1,242 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: Arial;
+	src:url('bubblegum-sans-regular.otf');
+}
+/*FORMATAÇÃO DE TEXTO E CORPO*/
+
+body {
+	font-family: sans-serif;
+	background-color: #dddddd;
+	color: black;
+}
+
+div#interface {
+	width: 1100px;
+	background-color: #ffffff;
+	margin: -20px auto 0px auto;
+	box-shadow: 2px 1px 2px black;
+	padding: 10px;
+}
+
+p {
+	text-align: justify;
+	text-indent: 5%;
+}
+
+ img#icone {
+	position: absolute;
+	left: 1060px;
+	top: 50px;
+}
+
+header#cabecalho {
+	border-bottom: 1px #606060 solid;
+	height: 130px;
+	background: url("icones/glass-logo-peq.jpg") no-repeat 0px 70px;
+}
+
+header#cabecalho h1 {
+	font-family: Arial;
+	font-size: 30px;
+	color: darkgray;
+	text-shadow: 2px 3px 2px black;
+	padding: 0px;
+	margin-bottom: 0px;
+}
+
+header#cabecalho h2 {
+	font-family: Arial;
+	color: #888888;
+	font-size: 15pt;
+	padding: 0px;
+	margin-top: 0px;
+}
+
+section#corpo {
+	display: block;
+	width: 620px;
+	float: left;
+	border-right: 1px solid #606060;
+	padding-right: 15px; 
+}
+
+aside#lateral {
+	display: block;
+	width: 440px;
+	float: right;
+	background-color: lightgrey;
+	padding: 10px;
+	box-shadow: 2px 2px 2px black;
+	margin-top: 10px;
+}
+
+aside#lateral h1 {
+	font-family: Arial, sans-serif;
+	font-size: 20pt;
+	color: grey;
+	margin-top: 0px;
+}
+
+aside#lateral h2 {
+	background-color: grey;
+	font-size: 15pt;
+	color: white;
+	padding: 10px;
+}
+
+footer#rodape {
+	clear: both;
+	border-top: 1px solid #606060;
+}
+
+footer#rodape p {
+	text-align: center;
+}
+
+article#noticia-principal h2 {
+	background-color: lightgrey;
+	color: black;
+	margin: 5px 0px 5px 0px;
+	padding: 2px 0px 2px 0px;
+}
+
+.direita {
+	text-align: right;
+}
+
+header#cabeçalho-artigo h1 {
+	font-family: Arial;
+	color: black;
+	font-size: 20pt;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+header#cabeçalho-artigo h2 {
+	font-size: 10pt;
+	color: grey;
+	background-color: white;
+	margin: 0px;
+}
+
+header#cabeçalho-artigo h3 {
+	font-size: 10pt;
+	color: black;
+}
+
+
+/*FORMATAÇÃO DE FOTO COM/SEM LEGENDA*/
+
+figure.foto-legenda {
+	position: relative;
+	border: 8px solid white;
+	box-shadow: 1px 2px 3px black;
+	display: inline-block;
+}
+
+figure.foto-legenda img {
+	width: 100%;
+	height: 100%;
+}
+
+figure.foto-legenda figcaption {
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	position: absolute;
+	transition: opacity 1s;
+	opacity: 0;
+	box-sizing: border-box;
+	background-color: rgba(0,0,0,.4);
+	color: white;
+	padding: 10px;
+}
+
+figure.foto-legenda:hover figcaption {
+	opacity: 1;
+}
+
+/*FORMATAÇÃO DE MENU*/
+nav#menu-site {
+	display: block;
+	
+}
+
+nav#menu-site ul {
+	list-style: none;
+	text-transform: uppercase;
+	position: absolute;
+	top: -20px;
+	left: 650px;
+	float: left;
+}
+
+nav#menu-site ul li {
+	display: inline-block;
+	background-color: lightgrey;
+	padding: 5px;
+	margin: 2px;
+	transition: background-color 1s;
+}
+
+nav#menu-site li:hover {
+	background-color: #606060;
+}
+
+nav#menu-site h1 {
+	display: none;
+}
+
+nav#menu-site a {
+	color: black;
+	text-decoration: none;
+}
+
+nav#menu-site a:hover {
+	color: white;
+	text-decoration: underline;
+}
+
+/*FORMATAÇÃO DE TABELA*/
+
+table#tabelaspec {
+	border: 1px solid black;
+	margin-left: auto;
+	margin-right: auto;
+	border-spacing: 0px;
+}
+
+table#tabelaspec td {
+	border: 1px solid grey;
+	padding: 10px;
+	vertical-align: middle;
+}
+
+table#tabelaspec td.ce {
+	color: white;
+	background-color: grey;
+	vertical-align: top;
+	font-weight: bold;
+}
+
+table#tabelaspec td.cd {
+	color: black;
+	background-color: lightgrey;
+}
+
+table#tabelaspec caption {
+	color: black;
+	font-weight: bolder;
+	font-size: 13pt;
+}
+
+table#tabelaspec caption span {
+	display: block;
+	float: right;
+	color: black;
+	font-size: 9pt;
+	margin-top: 10px;
+}
+

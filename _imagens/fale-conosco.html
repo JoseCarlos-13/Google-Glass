@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">   
+    <title>Tudo Sobre Google Glass</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <link rel="stylesheet" type="text/css" href="form.css">
+    <script type="text/javascript">
+        function calc_total() {
+            var quantidade = parseInt(document.getElementById('cQuantidade').value);
+            tot = quantidade * 1500;
+            document.getElementById('cPreço').value = tot;
+        }
+    </script>
+</head>
+
+<script src="funcoes.js"></script>
+
+<body>
+<div id="interface">
+    
+    <header id="cabecalho">
+        <hgroup>
+            <h1>Google Glass</h1>
+            <h2>A revolução do Google está chegando</h2>
+        </hgroup>
+    </header>
+
+    
+    <img id="icone" src="icones/contato.png"/>
+
+    <nav id="menu-site">    
+    <ul>
+        <li onmouseover="mudaFoto('icones/home.png')" onmouseout="mudaFoto('icones/contato.png')"><a href="index.html">Home</a></li>
+        <li onmouseover="mudaFoto('icones/especificacoes.png')" onmouseout="mudaFoto('icones/contato.png')"><a href="specs.html">Especificações</a></li>
+        <li onmouseover="mudaFoto('icones/fotos.png')" onmouseout="mudaFoto('icones/contato.png')"><a href="fotos.html">fotos</a></li>
+        <li onmouseover="mudaFoto('icones/multimidia.png')" onmouseout="mudaFoto('icones/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+        <li onmouseover="mudaFoto('icones/contato.png')" onmouseout="mudaFoto('icones/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+    </ul>
+</nav>
+
+<section id="corpo-full">
+    <article id="noticia-principal">
+        <header id="cabeçalho-artigo">
+            <hgroup>
+            <h3>Fale Conosco > Contato</h3>
+            <h1>Formulário de Contato</h1>
+            <h2>por Gustavo Guanabara</h2>
+            <h3 align="direita">Atualizado em 01/Maio/2013</h3>
+            </hgroup>
+        </header>
+    </article>
+           
+            <form method="post" id="Contato" action="" oninput="calc_total();">
+                <fieldset id="usuario"><legend>Identificação do Usuário</legend>
+                   <p><label for="cNome">Nome:</label>
+                        <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome completo"/></p>
+                    <p><label for="cSenha">Senha:</label>
+                        <input type="password" name="tSenha" id="cSenha" size="10" maxlength="8" placeholder="8 digitos"/></p>
+                    <p><label for="cEmail">E-mail:</label>
+                        <input type="Email" name="tEmail" id="cEmail" size="20" placeholder="Coloque seu email"></p>
+                    
+                    <fieldset id="sexo"><legend>Sexo:</legend>
+                        <input type="radio" name="tSexo" id="cMasc" checked>
+                        <label for="cMasc">Masculino</label><br>
+                        <input type="radio" name="tSexo" id="cFem">
+                        <label for="cFem">Feminino</label>   
+                    </fieldset>
+                    
+                    <p><label id="cData">Data de Nascimento:</label>
+                    <input type="date" name="tData" id="cData"></input></p>
+                </fieldset>
+
+                <fieldset id="endereço"><legend>Endereço do Usuário</legend> 
+                    <p><label for="cRua">Logradouro:</label>
+                        <input type="text" name="tRua" id="cRua" size="20" maxlength="30" placeholder="Rua, Av, Travl..."></p>
+                    <p><label for="cNumero">Número:</label>
+                        <input type="number" name="tNumero" id="cNumero" min="0" max="99999"></p>
+                    <p><label for="cEstado">Estado:</label>
+                        <select name="tEstado" id="cEstado">
+                            <optgroup label="Regiao Sudeste">
+                                <option>Rio de Janeiro</option>
+                                <option>São Paulo</option>
+                                <option>Minas Gerais</option>
+                            </optgroup>
+                            
+                            <optgroup label="Regiao Sul">
+                                <option>Paraná</option>
+                                <option>Santa Catarina</option>
+                                <option>Rio grande do sul</option>
+                            </optgroup>     
+                        </select></p>
+                    <p><label for="cCidade">Cidade:</label>
+                        <input type="text" name="tCidade" id="cCidade" size="20" maxlength="40" placeholder="Sua cidade" list="cidades"></p>
+                        <datalist id="cidades">
+                            <option value="Rio de Janeiro"></option>
+                            <option value="São Paulo"></option>
+                            <option value="Nova Iguaçu"></option>
+                            <option value="Rio Grande do Sul"></option>
+                        </datalist>
+                </fieldset>
+
+                <fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
+                    <p><label for="cUrgencia">Grau de Urgência:</label>
+                    Mín<input type="range" name="tUrgencia" id="cUrgencia" min="0" max="10" step="5">Max</p>
+                    <p><label for="cMensagem">Mensagem:</label>
+                        <textarea name="tMensagem" id="cMensagem" cols="45" rows="5" placeholder="Deixe sua mensagem"></textarea></p>
+                 </fieldset>
+
+                <fieldset id="pedido"><legend>Quero um Google Glass</legend>
+                    <p><input type="checkbox" name="tPedido" id="cPedido">
+                        <label for="cPedido">Gostaria de adquirir um Google Glass quando disponível</label></p>
+                    <p><input type="color" name="tCor" id="cCor" value="#0000FF">
+                        <label for="cCor">Cor:</label></p>
+                    <p><label for="cQuantidade">Quantidade:</label>
+                        <input type="number" name="tQuantidade" id="cQuantidade" min="0" max="5" value="0"></p>
+                    <p><label for="cPreço">Preço Total: R$</label>
+                        <input type="number" name="tPreço" id="cPreço" placeholder="total a pagar" readonly></p>
+                </fieldset>
+
+                <input type="image" name="tEnviar" src="icones/botao-enviar.png">
+            </form>
+    
+    </section>
+
+
+<footer id="rodape">
+    <p>Copyright 2013 - by Gustavo Guanabara</p>
+    <p>Facebook | Twitter</p>
+</footer>
+
+</div>
+</body>
+</html>
